@@ -4,6 +4,7 @@ import FeatureCard from "./FeatureCard";
 import iconreservations from "../images/reservico.png";
 import iconanalytics from "../images/analyticsicon.png";
 import mockup from "../images/mockup.png";
+import Chip from './Chip';
 
 const FeatureSection = () => {
   const features = [
@@ -40,9 +41,9 @@ const FeatureSection = () => {
         <div className="flex flex-col items-center w-full">
           <div className="max-w-2xl w-full">
             {/* Label */}
-            <div className="text-base text-pink-700 font-semibold">
-              Fitur
-            </div>
+            <div className="w-fit p-4 text-primary mx-auto">
+                        <Chip text='Fitur' background='#fff4f9' ring='primary'/>
+                    </div>
             {/* Title */}
             <h2 className="mt-3 text-4xl tracking-tighter leading-none text-gray-900 text-center md:text-5xl">
             Kemudahan Reservasi Layanan

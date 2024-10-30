@@ -1,15 +1,13 @@
 
 import { Outlet } from "react-router-dom";
-import Navbar from "../component/Navbar";
 const Layout = () => {
     return (
-        <>
-            <Navbar />
-            <div className="w-full">
+        <div className="min-h-screen flex flex-col">
+            <main className="flex-grow">
                 <Outlet />
-            </div>
-        </>
-    )
-}
+            </main>
+        </div>
+    );
+};
 
 export default Layout

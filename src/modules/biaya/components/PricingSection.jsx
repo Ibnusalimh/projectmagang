@@ -1,4 +1,5 @@
 import React from 'react';
+import Chip from './Chip'
 import PricingCard from './PricingCard';
 
 const pricingData = [
@@ -37,9 +38,9 @@ function PricingSection() {
         <div className="flex flex-col items-center w-full">
           <div className="max-w-2xl w-full">
             {/* Label */}
-            <h2 className="text-base text-pink-700 font-semibold">
-              Biaya
-            </h2>
+            <div className="w-fit p-4 text-primary mx-auto">
+                        <Chip text='Biaya' background='#fff4f9' ring='primary'/>
+                    </div>
             {/* Title */}
             <h3 className="mt-3 text-5xl tracking-tighter leading-none text-gray-900 text-center md:text-4xl">
               Simple & Transparan

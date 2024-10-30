@@ -14,7 +14,7 @@ const CallToAction = () => (
             Join dengan 150+ Bisnis yang telah Bertumbuh.
           </p>
         </div>
-        <Button variant="primary" text="Registrasi Sekarang" />
+        <Button variant="primary" text="Registrasi Sekarang" className="text-base font-semibold"/>
       </div>
     </div>
   </section>

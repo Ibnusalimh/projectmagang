@@ -20,9 +20,22 @@ import Container from "../component/Container"
 import ContainerTitle from "../component/particles/ContainerTitle"
 import ContainerInformation from "../component/particles/ContainerInformation"
 import Avatar from '../assets/images/Avatar.svg'
+import sideImage from '../assets/images/side-background.svg'
+
+import Icon1 from '../assets/images/icon/1.svg';
+import Icon2 from '../assets/images/icon/2.svg';
+import Icon3 from '../assets/images/icon/3.svg';
+import Icon4 from '../assets/images/icon/4.svg';
+import Icon5 from '../assets/images/icon/5.svg';
+import Icon6 from '../assets/images/icon/6.svg';
 
 
 function About() {
+
+    const handleToFitur = () => {
+        window.location.href = "/fitur";
+      }
+
     return (
         <>
             <section>
@@ -67,7 +80,7 @@ function About() {
             <Section>
                 <Container>
                     <div className="w-fit p-4 text-primary mx-auto">
-                        <Chip text='Benefit' background='transparen' />
+                        <Chip text='Benefit' background='#fff4f9' ring='primary'/>
                     </div>
                     <div className="w-full md:w-2/5 mx-auto">
                         <ContainerTitle>
@@ -112,7 +125,7 @@ function About() {
             <Section>
                 <Container>
                     <div className="w-fit p-4 text-primary mx-auto">
-                        <Chip text='Fitur' background='transparen' />
+                        <Chip text='Fitur' background='transparen' ring='primary'/>
                     </div>
                     <div className="w-full md:w-2/5 mx-auto">
                         <ContainerTitle>
@@ -127,21 +140,21 @@ function About() {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-10 w-full md:w-4/5 mx-auto">
                                 <Card>
                                     <div className="mx-auto">
-                                        <img className="w-14" src="../../public/icon/1.svg" alt="" />
+                                        <img className="w-14" src={Icon1} alt="" />
                                     </div>
                                     <CardTitle>Ticketing Management</CardTitle>
                                     <CardInformation>Kelola penjualan tiket event dengan kemudahan bukti QR code, refund, re-scheduling, sistem pembayaran beragam hingga voucher.</CardInformation>
                                 </Card>
                                 <Card>
                                     <div className="mx-auto">
-                                        <img className="w-14" src="../../public/icon/2.svg" alt="" />
+                                        <img className="w-14" src={Icon2} alt="" />
                                     </div>
                                     <CardTitle>Reservation Management</CardTitle>
                                     <CardInformation>Kelola reservasi dan tingkatkan optimalkan kepuasan pelanggan Anda dengan sistem pembayaran beragam.</CardInformation>
                                 </Card>
                                 <Card>
                                     <div className="mx-auto">
-                                        <img className="w-14" src="../../public/icon/3.svg" alt="" />
+                                        <img className="w-14" src={Icon3} alt="" />
                                     </div>
                                     <CardTitle>Marketing Analytics</CardTitle>
                                     <CardInformation>Sistem analisis data yang lengkap untuk tracking ROI bisnis atau event, sehingga mudah menentukan strategi bisnis.</CardInformation>
@@ -154,21 +167,21 @@ function About() {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-10 w-4/5 mx-auto">
                                 <Card>
                                     <div className="mx-auto">
-                                        <img className="w-14" src="../../public/icon/4.svg" alt="" />
+                                        <img className="w-14" src={Icon4} alt="" />
                                     </div>
                                     <CardTitle>AI Marketing Generator</CardTitle>
                                     <CardInformation>Buat strategi marketing dan konten marketing untuk meningkatkan penjualan tiket event atau layanan bisnis Anda.</CardInformation>
                                 </Card>
                                 <Card>
                                     <div className="mx-auto">
-                                        <img className="w-14" src="../../public/icon/5.svg" alt="" />
+                                        <img className="w-14" src={Icon5} alt="" />
                                     </div>
                                     <CardTitle>Virtual Events Management</CardTitle>
                                     <CardInformation>Sistem virtual event terintegrasi dengan marketplace untuk memberikan pengalaman event virtual terbaik.</CardInformation>
                                 </Card>
                                 <Card>
                                     <div className="mx-auto">
-                                        <img className="w-14" src="../../public/icon/6.svg" alt="" />
+                                        <img className="w-14" src={Icon6} alt="" />
                                     </div>
                                     <CardTitle>Marketing Tools</CardTitle>
                                     <CardInformation>Fitur marketing untuk meningkatkan promosi event maupun bisnis Anda, seperti email marketing, WA marketing, media coverage dsb.</CardInformation>
@@ -181,7 +194,7 @@ function About() {
             <Section>
                 <Container>
                     <div className="px-8">
-                        <div className="w-fit text-primary">
+                        <div className="w-fit p-4 text-primary">
                             <Chip text='Testimoni' background='transparen' />
                         </div>
                         <div className="text-left">
@@ -214,8 +227,9 @@ function About() {
                             </div>
                         </div>
 
-                        <div className="md:w-1/2 w-full h-[30vh] md:h-[90vh] md:ml-24 bg-cover" style={{ backgroundImage: "url('../public/side-background.svg')" }}></div>
-
+                        <div className="md:w-1/2 w-full h-[30vh] md:h-[90vh] md:ml-24 bg-cover">
+                            <img src={sideImage} alt='' />
+                        </div>
                     </div>
                 </Container>
             </Section>
@@ -227,7 +241,7 @@ function About() {
                         <p className="text-center text-lg md:text-xl text-slate-600">Join dengan 150+ Bisnis yang Telah Bertumbuh</p>
                     </div>
                     <div className="md:w-3/5 mx-auto flex flex-col md:flex-row w-full md:items-center md:justify-center gap-4">
-                        <button className="py-4 px-7 font-semibold ring-1 ring-slate-300 rounded-md flex gap-2 items-center justify-center text-center w-full md:w-fit">
+                        <button className="py-4 px-7 font-semibold ring-1 ring-slate-300 rounded-md flex gap-2 items-center justify-center text-center w-full md:w-fit" onClick={handleToFitur}>
                             Fitur Agendakota
                         </button>
                         <button className="py-4 px-7 font-semibold bg-primary text-white rounded-md w-full md:w-fit">

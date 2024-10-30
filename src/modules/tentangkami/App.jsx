@@ -1,18 +1,16 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './layouts';
+import About from './views/About';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Layout from './layouts'
-import About from './views/About'
-
-function App() {
+function TentangKamiApp() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout/>}>
-         <Route index element={<About/>}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  )
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<About />} />
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default TentangKamiApp;

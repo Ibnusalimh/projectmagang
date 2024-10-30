@@ -1,6 +1,6 @@
   import React from 'react';
 
-  function Button({ variant, text }) {
+  function Button({ variant, text, className = "" }) {
     const baseClasses = "overflow-hidden gap-2 self-stretch px-5 py-2.5 rounded-lg";
     const variantClasses = {
       primary: "bg-pink-700 text-white border border-pink-700 border-solid shadow-sm",
@@ -8,9 +8,9 @@
     };
 
     return (
-      <button className={`${baseClasses} ${variantClasses[variant]}`}>
-        {text}
-      </button>
+      <button className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+      {text}
+    </button>
     );
   }
 

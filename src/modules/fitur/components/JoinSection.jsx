@@ -48,7 +48,7 @@ const JoinSection = () => (
           </div>
         </div>
         <div className="flex gap-3 items-start self-start mt-10">
-          <Button variant="primary" text="Registrasi Sekarang" />
+          <Button variant="primary" text="Registrasi Sekarang" className="text-base font-semibold"/>
         </div>
       </div>
       <img

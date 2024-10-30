@@ -10,6 +10,11 @@ const partners = [
 ];
 
 function CTASection() {
+
+  const handleToFitur = () => {
+    window.location.href = "/fitur";
+  }
+
   return (
     <section className="flex overflow-hidden flex-col justify-center items-center py-24 w-full bg-pink-700 max-md:max-w-full">
       <div className="flex flex-col px-8 max-w-full w-[1280px] max-md:px-5">
@@ -34,7 +39,7 @@ function CTASection() {
             </div>
           </div>
           <div className="flex gap-3 items-start text-base font-semibold min-w-[240px]">
-            <Button text="Fitur Agendakota" variant="primary" />
+            <Button text="Fitur Agendakota" variant="primary" onClick={handleToFitur}/>
             <Button text="Registrasi Sekarang" variant="secondary" />
           </div>
         </div>
