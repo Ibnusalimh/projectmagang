@@ -6,6 +6,14 @@
 ![image](https://github.com/user-attachments/assets/ab8b72fb-de08-491e-92c0-a4f6b97aaedc)
 ![image](https://github.com/user-attachments/assets/41cd7def-464c-491d-91b5-9bb0a1d03df2)
 
+# Dokumentasi 11/11/2024
+
+![image](https://github.com/user-attachments/assets/d657088c-2ded-4c63-91b5-2658efe1d4ba)
+![image](https://github.com/user-attachments/assets/6e3cff65-bd87-405f-bcda-bdde6c1d217e)
+![image](https://github.com/user-attachments/assets/bf77e034-43f1-4d6c-8e6a-98d8812879d9)
+![image](https://github.com/user-attachments/assets/2391baa5-1fe5-43e0-b97b-6ee1081993f8)
+
+
 ## Dokumentasi Project Web
 
 ### Halaman Utama (Tentang Kami)
