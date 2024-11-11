@@ -55,7 +55,10 @@ function About() {
                                 <FontAwesomeIcon icon={faCirclePlay} />
                                 Demo
                             </button>
-                            <button className="py-4 px-7 bg-primary text-white rounded-md w-full md:w-fit">
+                            <button 
+                                className="py-4 px-7 bg-primary text-white rounded-md w-full md:w-fit"
+                                onClick={() => (window.location.href = 'https://agendakota.id/register-user')}
+                                >
                                 Registrasi Sekarang
                             </button>
                         </div>
@@ -244,7 +247,10 @@ function About() {
                         <button className="py-4 px-7 font-semibold ring-1 ring-slate-300 rounded-md flex gap-2 items-center justify-center text-center w-full md:w-fit" onClick={handleToFitur}>
                             Fitur Agendakota
                         </button>
-                        <button className="py-4 px-7 font-semibold bg-primary text-white rounded-md w-full md:w-fit">
+                        <button 
+                            className="py-4 px-7 font-semibold bg-primary text-white rounded-md w-full md:w-fit"
+                            onClick={() => (window.location.href = 'https://agendakota.id/register-user')}
+                        >
                             Registrasi Sekarang
                         </button>
                     </div>

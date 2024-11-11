@@ -48,7 +48,7 @@ const JoinSection = () => (
           </div>
         </div>
         <div className="flex gap-3 items-start self-start mt-10">
-          <Button variant="primary" text="Registrasi Sekarang" className="text-base font-semibold"/>
+          <Button variant="primary" text="Registrasi Sekarang" className="text-base font-semibold" onClick={() => { window.location.href = 'https://agendakota.id/register-user'; }}/>
         </div>
       </div>
       <img

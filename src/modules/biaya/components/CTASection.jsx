@@ -40,7 +40,7 @@ function CTASection() {
           </div>
           <div className="flex gap-3 items-start text-base font-semibold min-w-[240px]">
             <Button text="Fitur Agendakota" variant="primary" onClick={handleToFitur}/>
-            <Button text="Registrasi Sekarang" variant="secondary" />
+            <Button text="Registrasi Sekarang" variant="secondary" onClick={() => (window.location.href = 'https://agendakota.id/register-user')}/>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import React from "react";
 
 function CallToAction() {
@@ -15,10 +14,21 @@ function CallToAction() {
             </p>
           </div>
           <div className="flex gap-3 items-start mt-10 text-base font-semibold">
-            <button className="overflow-hidden gap-2 self-stretch px-5 py-3 bg-white rounded-lg border border-gray-300 border-solid shadow-sm text-slate-700">
+            <button
+              onClick={() => {
+                window.location.href = "/fitur";
+              }}
+              className="overflow-hidden gap-2 self-stretch px-5 py-3 bg-white rounded-lg border border-gray-300 border-solid shadow-sm text-slate-700"
+            >
               Fitur Agendakota
             </button>
-            <button className="overflow-hidden gap-2 self-stretch px-5 py-3 bg-pink-700 rounded-lg border border-pink-500 border-solid shadow-sm text-white">
+
+            <button
+              className="overflow-hidden gap-2 self-stretch px-5 py-3 bg-pink-700 rounded-lg border border-pink-500 border-solid shadow-sm text-white"
+              onClick={() =>
+                (window.location.href = "https://agendakota.id/register-user")
+              }
+            >
               Registrasi Sekarang
             </button>
           </div>

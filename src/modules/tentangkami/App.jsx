@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './layouts';
 import About from './views/About';
 
+
 function TentangKamiApp() {
   return (
     <Routes>

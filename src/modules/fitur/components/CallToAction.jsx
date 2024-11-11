@@ -1,4 +1,3 @@
-// CallToAction.js
 import React from "react";
 import Button from "./Button";
 
@@ -13,9 +12,15 @@ const CallToAction = () => (
           <p className="mt-4 text-xl text-pink-500">
             Join dengan 150+ Bisnis yang telah Bertumbuh.
           </p>
-        </div>
-        <Button variant="primary" text="Registrasi Sekarang" className="text-base font-semibold"/>
-      </div>
+          </div>
+  <Button
+    variant="primary"
+    text="Registrasi Sekarang"
+    className="text-base font-semibold"
+    onClick={() => { window.location.href = 'https://agendakota.id/register-user'; }}
+  />
+</div>
+
     </div>
   </section>
 );

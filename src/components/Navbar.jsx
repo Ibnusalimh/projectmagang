@@ -36,9 +36,20 @@ const Navbar = () => {
                 </ul>
 
                 <div className="flex flex-col p-2 w-full md:w-fit md:flex-row gap-2 md:gap-4">
-                    <button className='px-4 py-2.5 ring-1 md:ring-0 ring-primary md:text-slate-600 text-primary font-semibold rounded-md'>Log&nbsp;in</button>
-                    <button className='px-4 py-2.5 bg-primary rounded-md text-white'>Sign&nbsp;up</button>
-                </div>
+  <a
+    href="https://agendakota.id/auth-user"
+    className="px-4 py-2.5 ring-1 md:ring-0 ring-primary md:text-slate-600 text-primary font-semibold rounded-md text-center"
+  >
+    Log&nbsp;in
+  </a>
+  <a
+    href="https://agendakota.id/register-user"
+    className="px-4 py-2.5 bg-primary rounded-md text-white text-center"
+  >
+    Sign&nbsp;up
+  </a>
+</div>
+
             </div>
         </nav>
     )
