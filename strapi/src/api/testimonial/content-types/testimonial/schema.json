@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "components_testimonial_testimonial",
+  "info": {
+    "singularName": "testimonial",
+    "pluralName": "testimonials",
+    "displayName": "Testimonials",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "testimonial_text": {
+      "type": "text",
+      "required": true
+    },
+    "person_name": {
+      "type": "string",
+      "required": true
+    },
+    "person_position": {
+      "type": "string",
+      "required": true
+    },
+    "comlogo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title_testi": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

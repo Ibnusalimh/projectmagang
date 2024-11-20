@@ -1,9 +1,52 @@
-// testing strapi headless cms
-import axios from 'axios';
+import { useEffect, useState } from 'react';
 
-const API_URL = 'http://localhost:1337';
+const useFetch = (url) => {
+    const [data,setData]= useState(null)
+    const [error,setError] = useState(null)
+    const [loading,setLoading] = useState(true)
 
-export const fetchContent = async (endpoint) => {
-  const response = await axios.get(`${API_URL}/${endpoint}`);
-  return response.data;
-};
+    useEffect(() => {
+        const fetchData = async () => {
+          setLoading(true);
+          try {
+            console.log('Fetching URL:', url); // Log URL
+            const res = await fetch(url);
+            const json = await res.json();
+            console.log('Fetched Data:', json); // Log respons
+            setData(json);
+          } catch (error) {
+            console.error('Error fetching data:', error); // Log error
+            setError(error);
+          } finally {
+            setLoading(false);
+          }
+        };
+      
+        fetchData();
+      }, [url]);
+      
+
+    useEffect(()=>{
+        const fetchData = async ()=>{
+            setLoading(true)
+            try {
+                const res = await fetch(url)
+                const json = await res.json()
+                setData(json)
+                setLoading(false)
+                
+            } catch (error) {
+                setError(error)
+                setLoading(false)
+                
+            }
+        }
+
+        fetchData()
+    
+    },[url])
+
+    return {loading, error, data}
+}
+
+export default useFetch

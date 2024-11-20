@@ -7,19 +7,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons"
 import Macbook from '../assets/images/Macbook3.svg'
 
-import Company1 from '../assets/images/partner/company1.svg'
-import Company2 from '../assets/images/partner/company2.svg'
-import Company3 from '../assets/images/partner/company3.svg'
-import Company4 from '../assets/images/partner/company4.svg'
-import Company5 from '../assets/images/partner/company5.svg'
-
 import DEVICE from '../assets/images/Content.svg'
 import Card from "../component/Card"
 import CardInformation from "../component/particles/CardInformation"
 import Container from "../component/Container"
 import ContainerTitle from "../component/particles/ContainerTitle"
 import ContainerInformation from "../component/particles/ContainerInformation"
-import Avatar from '../assets/images/Avatar.svg'
 import sideImage from '../assets/images/side-background.svg'
 
 import Icon1 from '../assets/images/icon/1.svg';
@@ -30,8 +23,8 @@ import Icon5 from '../assets/images/icon/5.svg';
 import Icon6 from '../assets/images/icon/6.svg';
 
 
-function About() {
 
+const About = ({ dataHero, dataPartners, dataPtext, dataSolutions, dataCTA, dataBenefit, dataFeatures, dataTestimonial }) => {
     const handleToFitur = () => {
         window.location.href = "/fitur";
       }
@@ -42,24 +35,24 @@ function About() {
                 <Section>
                     <div className="flex flex-col gap-4 md:gap-6">
                         <div className="mx-auto w-fit mt-16 px-4">
-                            <ChipsCustom addOns={<Chip text='Fitur Baru' ring='primary' background='white' />} icon={faArrowRight} text='Coba Fitur AI Tools Sekarang' />
+                            <ChipsCustom addOns={<Chip text={dataHero.data.chip_text} ring='primary' background='white' />} icon={faArrowRight} text='Coba Fitur AI Tools Sekarang' />
                         </div>
                         <div className="md:w-2/3 mx-auto">
-                            <h1 className="text-4xl md:text-6xl text-center font-semibold">Membantu Bisnis Anda Fokus Bertumbuh</h1>
+                            <h1 className="text-4xl md:text-6xl text-center font-semibold">{dataHero.data.title}</h1>
                         </div>
                         <div className="md:w-3/5  mx-auto">
-                            <p className="text-center text-lg md:text-xl text-slate-600">Kami hadir untuk membantu event organizer, hotel dan penyedia layanan klinik & wellness tumbuh dengan efisien melalui sistem manajemen pemesanan dan tiket yang terpadu.</p>
+                            <p className="text-center text-lg md:text-xl text-slate-600">{dataHero.data.description}</p>
                         </div>
                         <div className="md:w-3/5 mx-auto flex flex-col md:flex-row w-full md:items-center md:justify-center gap-4">
                             <button className="py-4 px-7 ring-1 ring-slate-300 rounded-md flex gap-2 items-center justify-center text-center w-full md:w-fit">
                                 <FontAwesomeIcon icon={faCirclePlay} />
-                                Demo
+                                {dataHero.data.cta_demo_text}
                             </button>
                             <button 
                                 className="py-4 px-7 bg-primary text-white rounded-md w-full md:w-fit"
-                                onClick={() => (window.location.href = 'https://agendakota.id/register-user')}
+                                onClick={() => (window.location.href = dataHero.data.cta_register_link)}
                                 >
-                                Registrasi Sekarang
+                                {dataHero.data.cta_register_text}
                             </button>
                         </div>
                     </div>
@@ -67,16 +60,16 @@ function About() {
             </section>
             <div className="relative md:h-full h-[60vh]">
                 <Section className="z-10">
-                    <img src={Macbook} alt="" className="w-full" />
+                    <img src={`http://localhost:1337${dataHero.data.pichero[0].url}`} alt="" className="w-full" />
                 </Section>
                 <div className="flex flex-col gap-12 absolute bottom-0 left-0 w-full h-1/3 px-24 pt-8 bg-white z-20">
-                    <p className="text-center text-base text-deep2 text-medium">Join dengan 150+ Bisnis yang telah Bertumbuh</p>
+                    <p className="text-center text-base text-deep2 text-medium">{dataHero.data.company_section_text}</p>
                     <div className="flex flex-row flex-wrap md:flex-nowrap gap-1 justify-between">
-                        <img src={Company5} alt="" className="w-24 md:w-48" />
-                        <img src={Company1} alt="" className="w-24 md:w-48" />
-                        <img src={Company2} alt="" className="w-24 md:w-48" />
-                        <img src={Company3} alt="" className="w-24 md:w-48" />
-                        <img src={Company4} alt="" className="w-24 md:w-48" />
+                        <img src={`http://localhost:1337${dataPartners.data[0].CompanyPic[0].url}`} alt="" className="w-24 md:w-48" />
+                        <img src={`http://localhost:1337${dataPartners.data[1].CompanyPic[0].url}`} alt="" className="w-24 md:w-48" />
+                        <img src={`http://localhost:1337${dataPartners.data[2].CompanyPic[0].url}`} alt="" className="w-24 md:w-48" />
+                        <img src={`http://localhost:1337${dataPartners.data[3].CompanyPic[0].url}`} alt="" className="w-24 md:w-48" />
+                        <img src={`http://localhost:1337${dataPartners.data[4].CompanyPic[0].url}`} alt="" className="w-24 md:w-48" />
                     </div>
                 </div>
             </div>
@@ -87,11 +80,11 @@ function About() {
                     </div>
                     <div className="w-full md:w-2/5 mx-auto">
                         <ContainerTitle>
-                            Teknologi Agendakota
+                            {dataBenefit.data.title}
                         </ContainerTitle>
                     </div>
                     <div className="w-full md:w-3/4 mx-auto">
-                        <ContainerInformation>Kami percaya bahwa setiap bisnis berhak mendapatkan kemudahan dalam mengelola layanan. Dengan sistem booking, ticketing dan tools marketing kami dapat mendukung bisnis Anda.</ContainerInformation>
+                        <ContainerInformation>{dataBenefit.data.description}</ContainerInformation>
                     </div>
                 </Container>
             </Section>
@@ -102,22 +95,22 @@ function About() {
                     </div>
                     <div className="flex flex-col md:flex-row gap-2 px-2 md:px-10 w-full md:w-4/5 mx-auto">
                         <Card>
-                            <CardTitle>Untuk Klinik & Wellnes Provider</CardTitle>
-                            <CardInformation>Berguna untuk manajemen reservasi layanan klinik, special promotions, kegiatan wellness seperti Yoga, Reflexology, dsb.</CardInformation>
+                            <CardTitle>{dataSolutions.data[0].title}</CardTitle>
+                            <CardInformation>{dataSolutions.data[0].description}</CardInformation>
                             <div className="mx-auto">
                                 <ChipsCustom icon={faArrowRight} text='Learn More' />
                             </div>
                         </Card>
                         <Card>
-                            <CardTitle>Untuk Event Organizer</CardTitle>
-                            <CardInformation>Cocok untuk event creator mempromosikan event dan mengelola pemesanan tiket event Anda. Mulai dari event kecil hingga besar.</CardInformation>
+                            <CardTitle>{dataSolutions.data[1].title}</CardTitle>
+                            <CardInformation>{dataSolutions.data[1].description}</CardInformation>
                             <div className="mx-auto">
                                 <ChipsCustom icon={faArrowRight} text='Learn More' />
                             </div>
                         </Card>
                         <Card>
-                            <CardTitle>Untuk Hotel</CardTitle>
-                            <CardInformation>Mudah menjual side services selain kamar. Cocok untuk layanan Restaurant, Spa, Gym, Swimming Pool dan Special Promo lainnya.</CardInformation>
+                            <CardTitle>{dataSolutions.data[2].title}</CardTitle>
+                            <CardInformation>{dataSolutions.data[2].description}</CardInformation>
                             <div className="mx-auto">
                                 <ChipsCustom icon={faArrowRight} text='Learn More' />
                             </div>
@@ -132,11 +125,11 @@ function About() {
                     </div>
                     <div className="w-full md:w-2/5 mx-auto">
                         <ContainerTitle>
-                            Manajemen Tiket & Booking Layanan
+                            {dataFeatures.data[6].title}
                         </ContainerTitle>
                     </div>
                     <div className="w-full md:w-3/4 mx-auto">
-                        <ContainerInformation>Solusi kami dirancang khusus untuk membuat Anda fokus bertumbuh, berinovasi dan memberikan pengalaman terbaik pada pelanggan.</ContainerInformation>
+                        <ContainerInformation>{dataFeatures.data[6].description}</ContainerInformation>
                     </div>
                     <div>
                         <Container>
@@ -145,22 +138,22 @@ function About() {
                                     <div className="mx-auto">
                                         <img className="w-14" src={Icon1} alt="" />
                                     </div>
-                                    <CardTitle>Ticketing Management</CardTitle>
-                                    <CardInformation>Kelola penjualan tiket event dengan kemudahan bukti QR code, refund, re-scheduling, sistem pembayaran beragam hingga voucher.</CardInformation>
+                                    <CardTitle>{dataFeatures.data[0].title}</CardTitle>
+                                    <CardInformation>{dataFeatures.data[0].description}</CardInformation>
                                 </Card>
                                 <Card>
                                     <div className="mx-auto">
                                         <img className="w-14" src={Icon2} alt="" />
                                     </div>
-                                    <CardTitle>Reservation Management</CardTitle>
-                                    <CardInformation>Kelola reservasi dan tingkatkan optimalkan kepuasan pelanggan Anda dengan sistem pembayaran beragam.</CardInformation>
+                                    <CardTitle>{dataFeatures.data[1].title}</CardTitle>
+                                    <CardInformation>{dataFeatures.data[1].description}</CardInformation>
                                 </Card>
                                 <Card>
                                     <div className="mx-auto">
                                         <img className="w-14" src={Icon3} alt="" />
                                     </div>
-                                    <CardTitle>Marketing Analytics</CardTitle>
-                                    <CardInformation>Sistem analisis data yang lengkap untuk tracking ROI bisnis atau event, sehingga mudah menentukan strategi bisnis.</CardInformation>
+                                    <CardTitle>{dataFeatures.data[2].title}</CardTitle>
+                                    <CardInformation>{dataFeatures.data[2].description}</CardInformation>
                                 </Card>
                             </div>
                         </Container>
@@ -172,22 +165,22 @@ function About() {
                                     <div className="mx-auto">
                                         <img className="w-14" src={Icon4} alt="" />
                                     </div>
-                                    <CardTitle>AI Marketing Generator</CardTitle>
-                                    <CardInformation>Buat strategi marketing dan konten marketing untuk meningkatkan penjualan tiket event atau layanan bisnis Anda.</CardInformation>
+                                    <CardTitle>{dataFeatures.data[3].title}</CardTitle>
+                                    <CardInformation>{dataFeatures.data[3].description}</CardInformation>
                                 </Card>
                                 <Card>
                                     <div className="mx-auto">
                                         <img className="w-14" src={Icon5} alt="" />
                                     </div>
-                                    <CardTitle>Virtual Events Management</CardTitle>
-                                    <CardInformation>Sistem virtual event terintegrasi dengan marketplace untuk memberikan pengalaman event virtual terbaik.</CardInformation>
+                                    <CardTitle>{dataFeatures.data[4].title}</CardTitle>
+                                    <CardInformation>{dataFeatures.data[4].description}</CardInformation>
                                 </Card>
                                 <Card>
                                     <div className="mx-auto">
                                         <img className="w-14" src={Icon6} alt="" />
                                     </div>
-                                    <CardTitle>Marketing Tools</CardTitle>
-                                    <CardInformation>Fitur marketing untuk meningkatkan promosi event maupun bisnis Anda, seperti email marketing, WA marketing, media coverage dsb.</CardInformation>
+                                    <CardTitle>{dataFeatures.data[5].title}</CardTitle>
+                                    <CardInformation>{dataFeatures.data[5].description}</CardInformation>
                                 </Card>
                             </div>
                         </Container>
@@ -201,30 +194,30 @@ function About() {
                             <Chip text='Testimoni' background='transparen' />
                         </div>
                         <div className="text-left">
-                            <ContainerTitle>Apa Kata Pengguna Agendakota</ContainerTitle>
+                            <ContainerTitle>{dataTestimonial.data[0].title_testi}</ContainerTitle>
                         </div>
                         <div className="text-left">
-                            <ContainerInformation>Kami bangga mendukung bisnis-bisnis lokal untuk berkembang.</ContainerInformation>
+                            <ContainerInformation>{dataTestimonial.data[0].description}</ContainerInformation>
                         </div>
                     </div>
                 </Container>
                 <Container>
                     <div className="flex flex-col md:flex-row gap-8 px-6 md:px-8 mt-16">
                         <div className="w-full md:w-3/4 flex flex-col gap-8 py-8">
-                            <img src={Company1} alt="" className="w-28 mx-auto" />
+                            <img src={`http://localhost:1337${dataTestimonial.data[0].comlogo[0].url}`} alt="" className="w-28 mx-auto" />
                             <p className="text-center text-2xl md:text-5xl w-full md:w-4/5 font-semibold mt-8 mx-auto md:display-lg-medium text[#101828;]">
-                                We’ve been using Untitled to kick start every new project and can’t imagine working without it.
+                                {dataTestimonial.data.testimonial_text}
                             </p>
                             <div className="flex flex-col gap-4">
                                 <div className="mx-auto w-fit">
-                                    <img src={Avatar} />
+                                    <img src={`http://localhost:1337${dataTestimonial.data[0].avatar[0].url}`} />
                                 </div>
                                 <div className="flex flex-col gap-y-2">
                                     <p className="text-center text-xl font-medium">
-                                        Candice Wu
+                                        {dataTestimonial.data[0].person_name}
                                     </p>
                                     <p className="text-center text-lg">
-                                        Product Manager, Sisyphus
+                                        {dataTestimonial.data[0].person_position}
                                     </p>
                                 </div>
                             </div>
@@ -238,20 +231,20 @@ function About() {
             </Section>
                 <div className="flex flex-col gap-4 md:gap-6 px-2 py-4  md:p-8 mt-44 bg-[#F9FAFB]">
                     <div className="md:w-2/3 mx-auto">
-                        <h1 className="text-3xl text-center font-semibold">Scale Up Bisnismu Sekarang</h1>
+                        <h1 className="text-3xl text-center font-semibold">{dataCTA.data.title}</h1>
                     </div>
                     <div className="md:w-3/5  mx-auto">
-                        <p className="text-center text-lg md:text-xl text-slate-600">Join dengan 150+ Bisnis yang Telah Bertumbuh</p>
+                        <p className="text-center text-lg md:text-xl text-slate-600">{dataCTA.data.description}</p>
                     </div>
                     <div className="md:w-3/5 mx-auto flex flex-col md:flex-row w-full md:items-center md:justify-center gap-4">
                         <button className="py-4 px-7 font-semibold ring-1 ring-slate-300 rounded-md flex gap-2 items-center justify-center text-center w-full md:w-fit" onClick={handleToFitur}>
-                            Fitur Agendakota
+                            {dataCTA.data.feature_button_text}
                         </button>
                         <button 
                             className="py-4 px-7 font-semibold bg-primary text-white rounded-md w-full md:w-fit"
-                            onClick={() => (window.location.href = 'https://agendakota.id/register-user')}
+                            onClick={() => (window.location.href = dataCTA.data.register_button_link)}
                         >
-                            Registrasi Sekarang
+                            {dataCTA.data.register_button_text}
                         </button>
                     </div>
                 </div>

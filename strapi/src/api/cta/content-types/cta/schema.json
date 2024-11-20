@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "components_cta_cta",
+  "info": {
+    "singularName": "cta",
+    "pluralName": "ctas",
+    "displayName": "CTA Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "feature_button_text": {
+      "type": "string"
+    },
+    "register_button_text": {
+      "type": "string"
+    },
+    "register_button_link": {
+      "type": "string"
+    }
+  }
+}

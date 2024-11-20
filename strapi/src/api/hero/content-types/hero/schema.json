@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "components_hero_hero",
+  "info": {
+    "singularName": "hero",
+    "pluralName": "heroes",
+    "displayName": "Hero Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "chip_text": {
+      "type": "string"
+    },
+    "cta_demo_text": {
+      "type": "string"
+    },
+    "cta_register_text": {
+      "type": "string"
+    },
+    "cta_register_link": {
+      "type": "string"
+    },
+    "company_section_text": {
+      "type": "text"
+    },
+    "pichero": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

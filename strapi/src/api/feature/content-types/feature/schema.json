@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "components_feature_feature",
+  "info": {
+    "singularName": "feature",
+    "pluralName": "features",
+    "displayName": "Features"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
