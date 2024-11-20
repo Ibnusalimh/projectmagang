@@ -13,6 +13,20 @@
 ![image](https://github.com/user-attachments/assets/bf77e034-43f1-4d6c-8e6a-98d8812879d9)
 ![image](https://github.com/user-attachments/assets/2391baa5-1fe5-43e0-b97b-6ee1081993f8)
 
+# Dokumentasi 20/11/2024
+
+![image](https://github.com/user-attachments/assets/e7efe04d-5940-4e98-b83e-79e96b9f18a1)
+![image](https://github.com/user-attachments/assets/6f607121-e239-46e3-9e4e-5f237c9d6597)
+![image](https://github.com/user-attachments/assets/ed49ae10-a8c9-4358-8b0e-b12a6c9a504f)
+![image](https://github.com/user-attachments/assets/77e8bf82-a857-49bb-b3fe-154e5ab983de)
+![image](https://github.com/user-attachments/assets/26880cae-2598-43f6-a58c-efed2a2936d1)
+![image](https://github.com/user-attachments/assets/814f797a-4220-416c-8495-c036c0afad6f)
+![image](https://github.com/user-attachments/assets/e0e1f83a-9cdb-46f3-8aba-5d28af1b03a9)
+![image](https://github.com/user-attachments/assets/8835377e-360c-4597-a1ba-b377b4bd1eea)
+![image](https://github.com/user-attachments/assets/797145f4-ebc6-4e9d-8b44-6b0634255307)
+![image](https://github.com/user-attachments/assets/1eeb07a0-6587-4cb8-a232-d946cf206f88)
+![image](https://github.com/user-attachments/assets/8ebd2217-60d3-4787-a892-9c9914b4e2a6)
+
 
 ## Dokumentasi Project Web
 
